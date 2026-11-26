@@ -1,9 +1,6 @@
-console.log("Hi Babe!");
-var age = "your'e so hot";
-console.log(age);
+console.log("Hi");
 age =25;
 console.log(age);
-console.log("Can we hang out tonight?");
 let time = "8:00 PM"
 {
     time = "9:00 PM"
