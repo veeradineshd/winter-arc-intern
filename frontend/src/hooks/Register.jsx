@@ -86,15 +86,11 @@ const Register = ({ children }) => {
   }
 
   return (
-    <main className="min-h-screen bg-white">
-      <section className="w-full max-w-md space-y-6 text-left">
+    <section className="w-full max-w-md space-y-6 rounded-2xl border border-slate-200 bg-white p-6 text-left shadow-sm">
         {children}
-        <h1 className="mb-2 text-3xl font-bold tracking-tight text-slate-900">
-          Create your account
-        </h1>
-        <p className="mb-8 text-sm text-slate-600">
-          Enter your details below to register.
-        </p>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900">
+          Register form
+        </h2>
 
         <form className="space-y-5" noValidate onSubmit={handleSubmit}>
           <div>
@@ -102,7 +98,7 @@ const Register = ({ children }) => {
               className="mb-2 block text-sm font-medium text-slate-700"
               htmlFor="name"
             >
-              Name
+              Name:
             </label>
             <input
               autoComplete="name"
@@ -112,7 +108,7 @@ const Register = ({ children }) => {
               id="name"
               name="name"
               onChange={handleChange}
-              placeholder="Your name"
+              placeholder="Enter your name"
               type="text"
               value={user.name}
             />
@@ -128,7 +124,7 @@ const Register = ({ children }) => {
               className="mb-2 block text-sm font-medium text-slate-700"
               htmlFor="email"
             >
-              Email
+              Email:
             </label>
             <input
               autoComplete="email"
@@ -138,7 +134,7 @@ const Register = ({ children }) => {
               id="email"
               name="email"
               onChange={handleChange}
-              placeholder="you@example.com"
+              placeholder="Enter your email"
               type="email"
               value={user.email}
             />
@@ -154,7 +150,7 @@ const Register = ({ children }) => {
               className="mb-2 block text-sm font-medium text-slate-700"
               htmlFor="password"
             >
-              Password
+              Password:
             </label>
             <input
               autoComplete="new-password"
@@ -164,7 +160,7 @@ const Register = ({ children }) => {
               id="password"
               name="password"
               onChange={handleChange}
-              placeholder="At least 8 characters"
+              placeholder="Enter password"
               type="password"
               value={user.password}
             />
@@ -184,7 +180,7 @@ const Register = ({ children }) => {
             disabled={isSubmitting}
             type="submit"
           >
-            {isSubmitting ? 'Registering...' : 'Register'}
+            {isSubmitting ? 'Submitting...' : 'Submit'}
           </button>
         </form>
         {submitError && (
@@ -192,8 +188,7 @@ const Register = ({ children }) => {
             {submitError}
           </p>
         )}
-      </section>
-    </main>
+    </section>
   )
 }
 
